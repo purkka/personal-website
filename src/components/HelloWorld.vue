@@ -3,15 +3,15 @@
     <v-row>
       <v-col>
         <v-sheet class="mt-3">
-          <Intro/>
+          <Intro id="intro"/>
         </v-sheet>
 
         <v-sheet>
-          <AboutMe/>
+          <AboutMe id="aboutMe"/>
         </v-sheet>
 
         <v-sheet>
-          <Experience/>
+          <Experience id="experience"/>
         </v-sheet>
       </v-col>
     </v-row>
