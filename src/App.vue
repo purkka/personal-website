@@ -46,10 +46,12 @@
                   v-for="icon in icons"
                   :key="icon"
                   class="mx-4 white--text"
+                  :href="icon.href"
+                  target="_blank"
                   icon
               >
                 <v-icon size="24px">
-                  {{ icon }}
+                  {{ icon.pic }}
                 </v-icon>
               </v-btn>
             </v-card-text>
@@ -78,8 +80,8 @@ export default {
 
   data: () => ({
     icons: [
-      'mdi-github',
-      'mdi-linkedin',
+      { pic: 'mdi-github', href: 'https://github.com/purkka' },
+      { pic: 'mdi-linkedin', href: 'https://www.linkedin.com/in/erika-marttinen-53483a1b2/' },
     ],
   }),
 };

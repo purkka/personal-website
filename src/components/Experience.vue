@@ -90,7 +90,7 @@
                   >
                   </v-col>
                 </v-card-title>
-                  <v-card-text class="py-0" v-text="content.description"/>
+                <v-card-text class="py-0" v-text="content.description"/>
               </v-card>
             </template>
           </v-col>
@@ -125,18 +125,43 @@ export default {
             {
               title: 'Computer Science',
               courses: [
-                {name: 'Data Structures and Algorithms', link: '',},
-                {name: 'Programming Parallel Computers', link: '',},
-                {name: 'Computer Graphics', link: '',},
-                {name: 'Software Project', link: '',},
-                {name: 'Programming Studio 1+2', link: '',},
+                {
+                  name: 'Data Structures and Algorithms',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125590013-20210801/brochure',
+                },
+                {
+                  name: 'Programming Parallel Computers',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125618448-20210801/brochure',
+                },
+                {
+                  name: 'Computer Graphics',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125592183-20210801/brochure',
+                },
+                {
+                  name: 'Software Project',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125591890-20210801/brochure',
+                },
+                {
+                  name: 'Programming Studio 1+2',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1142318301-20210801/brochure',
+                },
+                {
+                  name: 'Databases',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125590913-20210801/brochure',
+                },
               ],
             },
             {
               title: 'Digital Systems and Design',
               courses: [
-                {name: 'Signals and Systems', link: '',},
-                {name: 'Embedded Real-Time Systems', link: '',},
+                {
+                  name: 'Signals and Systems',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1113161434-20210801/brochure',
+                },
+                {
+                  name: 'Embedded Real-Time Systems',
+                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1121459492-20210801/brochure',
+                },
               ],
             },
           ],
