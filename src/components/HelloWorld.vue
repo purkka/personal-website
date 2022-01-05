@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col>
-        <v-sheet class="mt-0">
+        <v-sheet class="mt-3">
           <Intro/>
         </v-sheet>
 
@@ -11,7 +11,7 @@
         </v-sheet>
 
         <v-sheet>
-          <AboutMe/>
+          <Experience/>
         </v-sheet>
       </v-col>
     </v-row>
@@ -21,9 +21,10 @@
 <script>
 import AboutMe from "@/components/AboutMe";
 import Intro from "@/components/Intro";
+import Experience from "@/components/Experience";
 
 export default {
   name: 'HelloWorld',
-  components: {Intro, AboutMe},
+  components: {Experience, Intro, AboutMe},
 }
 </script>

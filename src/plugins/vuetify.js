@@ -28,7 +28,7 @@ export default new Vuetify({
         warning: '#ffc107',
         info: '#e91e63',
         success: '#4caf50',
-        background: '#212121',
+        background: '#191919',
       },
     },
   },
