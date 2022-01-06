@@ -20,6 +20,10 @@
         Experience
       </v-btn>
 
+      <v-btn @click="$vuetify.goTo('#projects')" text>
+        Projects
+      </v-btn>
+
       <v-spacer/>
     </v-app-bar>
 
