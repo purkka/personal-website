@@ -84,8 +84,8 @@ export default {
 
   data: () => ({
     icons: [
-      { pic: 'mdi-github', href: 'https://github.com/purkka' },
-      { pic: 'mdi-linkedin', href: 'https://www.linkedin.com/in/erika-marttinen-53483a1b2/' },
+      {pic: 'mdi-github', href: 'https://github.com/purkka'},
+      {pic: 'mdi-linkedin', href: 'https://www.linkedin.com/in/erika-marttinen-53483a1b2/'},
     ],
   }),
 };

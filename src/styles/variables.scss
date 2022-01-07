@@ -8,3 +8,20 @@
 .v-sheet {
   margin-top: 24px;
 }
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #8FA4B7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C7387;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #546A7F;
+}
