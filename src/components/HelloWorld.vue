@@ -1,20 +1,20 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <v-sheet class="mt-3">
+  <v-container fluid>
+    <v-row class="pa-0">
+      <v-col class="pa-0">
+        <v-sheet class="v-sheet-custom">
           <Intro id="intro"/>
         </v-sheet>
 
-        <v-sheet>
+        <v-sheet class="v-sheet-custom" color="background">
           <AboutMe id="aboutMe"/>
         </v-sheet>
 
-        <v-sheet>
+        <v-sheet class="v-sheet-custom">
           <Experience id="experience"/>
         </v-sheet>
 
-        <v-sheet class="mb-3">
+        <v-sheet class="v-sheet-custom" color="background">
           <Projects id="projects"/>
         </v-sheet>
       </v-col>

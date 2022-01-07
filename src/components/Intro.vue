@@ -1,6 +1,6 @@
 <template>
-  <v-container class="ma-0 pa-0">
-    <v-row class="ma-0 pa-0">
+  <v-container>
+    <v-row>
       <v-col align-self="center" class="text-center">
         <v-col> Hi, I'm </v-col>
         <v-col class="text-h2"> Lorem Ipsum </v-col>
