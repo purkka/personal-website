@@ -6,7 +6,7 @@
         dark
     >
       <v-spacer/>
-      <v-btn @click="$vuetify.goTo('#intro')" text>
+      <v-btn @click="$vuetify.goTo(0)" text>
         Lorem
       </v-btn>
 

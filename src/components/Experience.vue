@@ -9,59 +9,68 @@
         <v-row
             v-if="item.uniStudies"
             :key="item.uniStudies"
-            class="px-12">
+        >
           <v-col cols="3">
-            <v-card class="pa-0 ma-0" elevation="0">
-              <v-card-title
-                  class="text-uppercase text-h6 grey--text"
-                  v-text="item.uniStudies.heading"
-              />
-            </v-card>
+            <v-col
+                class="text-overline font-weight-bold grey--text"
+                v-text="item.uniStudies.heading"
+            />
           </v-col>
           <v-col>
-            <v-card class="pa-0 ma-0" elevation="0">
-              <v-card-title class="pb-1">
-                {{ item.uniStudies.content.title }}
+            <v-col>
+              <v-row>
+                <v-col
+                    class="text-h6"
+                    v-text="item.uniStudies.content.title"
+                />
                 <v-spacer/>
                 <v-col
-                    class="subtitle-1 grey--text"
+                    class="text-overline grey--text"
                     v-text="item.uniStudies.content.date"
-                >
-                </v-col>
-              </v-card-title>
+                />
+              </v-row>
               <template v-for="row in item.uniStudies.content.body">
-                <v-card-text class="py-0" :key="row" v-text="row"/>
+                <v-row :key="row">
+                  <v-col
+                      class="py-0 grey--text text--darken-2"
+                      v-text="row"
+                  />
+                </v-row>
               </template>
-            </v-card>
+            </v-col>
           </v-col>
         </v-row>
 
         <v-row
             v-else-if="item.relevantCourses"
             :key="item.relevantCourses"
-            class="px-12">
+        >
           <v-col cols="3">
-            <v-card class="pa-0 ma-0" elevation="0">
-              <v-card-title
-                  class="text-uppercase text-h6 grey--text"
-                  v-text="item.relevantCourses.heading"
-              />
-            </v-card>
+            <v-col
+                class="text-overline font-weight-bold grey--text"
+                v-text="item.relevantCourses.heading"
+            />
           </v-col>
           <v-col>
             <template v-for="content in item.relevantCourses.content">
-              <v-card class="pa-0 ma-0" elevation="0" :key="content">
-                <v-card-title class="pb-1">
-                  {{ content.title }}
-                </v-card-title>
+              <v-col
+                  :key="content"
+                  class="text-h6"
+                  v-text="content.title"
+              />
+              <v-col
+                  :key="content"
+              >
                 <template v-for="course in content.courses">
-                  <v-card-text class="py-0" :key="course">
-                    <a class="pa-0 ma-0" :href="course.link">
-                      {{ course.name }}
-                    </a>
-                  </v-card-text>
+                  <v-row :key="course">
+                    <v-col class="py-0">
+                      <a class="pa-0 ma-0" :href="course.link">
+                        {{ course.name }}
+                      </a>
+                    </v-col>
+                  </v-row>
                 </template>
-              </v-card>
+              </v-col>
             </template>
           </v-col>
         </v-row>
@@ -69,29 +78,34 @@
         <v-row
             v-if="item.pastEmployment"
             :key="item.pastEmployment"
-            class="px-12">
+        >
           <v-col cols="3">
-            <v-card class="pa-0 ma-0" elevation="0">
-              <v-card-title
-                  class="text-uppercase text-h6 grey--text"
-                  v-text="item.pastEmployment.heading"
-              />
-            </v-card>
+            <v-col
+                class="text-overline font-weight-bold grey--text"
+                v-text="item.pastEmployment.heading"
+            />
           </v-col>
           <v-col>
             <template v-for="content in item.pastEmployment.content">
-              <v-card class="pa-0 ma-0" elevation="0" :key="content">
-                <v-card-title class="pb-1">
-                  {{ content.title }}
+
+              <v-col :key="content">
+                <v-row>
+                  <div>
+                    <v-col
+                        class="text-h6"
+                        v-text="content.title"
+                    />
+                    <v-col
+                        class="grey--text text--darken-2"
+                        v-text="content.description"/>
+                  </div>
                   <v-spacer/>
                   <v-col
-                      class="subtitle-1 grey--text"
+                      class="text-overline grey--text"
                       v-text="content.date"
-                  >
-                  </v-col>
-                </v-card-title>
-                <v-card-text class="py-0" v-text="content.description"/>
-              </v-card>
+                  />
+                </v-row>
+              </v-col>
             </template>
           </v-col>
         </v-row>
