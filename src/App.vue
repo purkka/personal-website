@@ -25,6 +25,19 @@
       </v-btn>
 
       <v-spacer/>
+
+      <v-btn
+          class="ma-2"
+          fab
+          small
+          depressed
+          color="transparent"
+          v-on:click="switchTheme"
+      >
+        <v-icon>
+          mdi-theme-light-dark
+        </v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-main class="background">
@@ -88,5 +101,12 @@ export default {
       {pic: 'mdi-linkedin', href: 'https://www.linkedin.com/in/erika-marttinen-53483a1b2/'},
     ],
   }),
+
+  methods: {
+    switchTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem('theme', this.$vuetify.theme.dark ? 'dark' : 'light');
+    },
+  },
 };
 </script>

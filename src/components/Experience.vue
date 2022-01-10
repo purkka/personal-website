@@ -32,7 +32,7 @@
               <template v-for="row in item.uniStudies.content.body">
                 <v-row :key="row">
                   <v-col
-                      class="py-0 grey--text text--darken-2"
+                      class="py-0"
                       v-text="row"
                   />
                 </v-row>
@@ -96,7 +96,6 @@
                         v-text="content.title"
                     />
                     <v-col
-                        class="grey--text text--darken-2"
                         v-text="content.description"/>
                   </div>
                   <v-spacer/>
