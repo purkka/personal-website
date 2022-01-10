@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="v-container-custom">
     <v-col>
       <v-col class="text-h4"> About me </v-col>
       <v-divider></v-divider>

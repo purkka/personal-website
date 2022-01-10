@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="v-container-custom">
     <v-col>
       <v-col class="text-h4"> Projects</v-col>
       <template v-for="item in items">

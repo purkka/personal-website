@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row class="pa-0">
       <v-col class="pa-0">
-        <v-sheet class="v-sheet-custom">
+        <v-sheet class="v-sheet-custom pt-16">
           <Intro id="intro"/>
         </v-sheet>
 
