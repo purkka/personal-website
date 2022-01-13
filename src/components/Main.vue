@@ -29,7 +29,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 
 export default {
-  name: 'HelloWorld',
+  name: 'Main',
   components: {Projects, Experience, Intro, AboutMe},
 }
 </script>

@@ -41,7 +41,7 @@
     </v-app-bar>
 
     <v-main class="background">
-      <HelloWorld/>
+      <Main/>
     </v-main>
 
     <v-footer color="black" padless class="ma-0">
@@ -86,13 +86,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Main from './components/Main';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Main,
   },
 
   data: () => ({
