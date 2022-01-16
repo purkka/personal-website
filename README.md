@@ -1,4 +1,4 @@
-# website-project
+# test-ts
 
 ## Project setup
 ```

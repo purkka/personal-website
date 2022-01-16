@@ -1,12 +1,5 @@
 module.exports = {
   transpileDependencies: [
-    'vuetify'
+    'vuetify',
   ],
-  pages: {
-    index: {
-      // entry for the page
-      entry: 'src/main.js',
-      title: 'Erika Marttinen',
-    },
-  },
-}
+};
