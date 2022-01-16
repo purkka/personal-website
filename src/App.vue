@@ -85,10 +85,11 @@
   </v-app>
 </template>
 
-<script>
-import Main from './components/Main';
+<script lang="ts">
+import Vue from 'vue';
+import Main from './components/Main.vue';
 
-export default {
+export default Vue.extend({
   name: 'App',
 
   components: {
@@ -97,8 +98,8 @@ export default {
 
   data: () => ({
     icons: [
-      {pic: 'mdi-github', href: 'https://github.com/purkka'},
-      {pic: 'mdi-linkedin', href: 'https://www.linkedin.com/in/erika-marttinen-53483a1b2/'},
+      { pic: 'mdi-github', href: 'https://github.com/purkka' },
+      { pic: 'mdi-linkedin', href: 'https://www.linkedin.com/in/erika-marttinen-53483a1b2/' },
     ],
   }),
 
@@ -108,5 +109,5 @@ export default {
       localStorage.setItem('theme', this.$vuetify.theme.dark ? 'dark' : 'light');
     },
   },
-};
+});
 </script>

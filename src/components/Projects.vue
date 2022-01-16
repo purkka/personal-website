@@ -11,7 +11,9 @@
             <v-col class="text-body-1 pt-3" v-text="item.summary"/>
             <v-expansion-panels class="pt-3">
               <v-expansion-panel>
-                <v-expansion-panel-header class="text-body-1"> View detailed description </v-expansion-panel-header>
+                <v-expansion-panel-header class="text-body-1">
+                  View detailed description
+                </v-expansion-panel-header>
                 <v-expansion-panel-content>
                   <v-col class="text-body-2" v-text="item.description"/>
                 </v-expansion-panel-content>
@@ -49,8 +51,10 @@
   </v-container>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   data: () => ({
     items: [
       {
@@ -74,5 +78,5 @@ export default {
       },
     ],
   }),
-}
+});
 </script>

@@ -22,14 +22,17 @@
   </v-container>
 </template>
 
-<script>
-import AboutMe from "@/components/AboutMe";
-import Intro from "@/components/Intro";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
+<script lang="ts">
+import Vue from 'vue';
+import AboutMe from './AboutMe.vue';
+import Intro from './Intro.vue';
+import Experience from './Experience.vue';
+import Projects from './Projects.vue';
 
-export default {
+export default Vue.extend({
   name: 'Main',
-  components: {Projects, Experience, Intro, AboutMe},
-}
+  components: {
+    Projects, Experience, Intro, AboutMe,
+  },
+});
 </script>

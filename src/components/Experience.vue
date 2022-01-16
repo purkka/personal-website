@@ -113,8 +113,10 @@
   </v-container>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   data: () => ({
     items: [
       {
@@ -188,11 +190,11 @@ export default {
               title: 'Eficode',
               date: 'August 10, 2020 – August 21, 2021',
               description: 'UX-designer summer trainee',
-            }
+            },
           ],
         },
       },
     ],
   }),
-}
+});
 </script>
