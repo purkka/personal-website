@@ -1,7 +1,7 @@
 <template>
   <v-container class="v-container-custom">
     <v-col>
-      <v-col class="text-h4"> Experience</v-col>
+      <v-col class="text-h4"> {{ $t("experience") }} </v-col>
       <template v-for="item in items">
 
         <v-divider :key="item"/>
@@ -117,84 +117,86 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  data: () => ({
-    items: [
-      {
-        uniStudies: {
-          heading: 'University Studies',
-          content: {
-            title: 'Aalto University',
-            date: 'September 2020 –',
-            body: [
-              'Major: Computer Science',
-              'Minor: Quantum Technology',
-              'Minor: Digital Systems and Design',
+  data() {
+    return {
+      items: [
+        {
+          uniStudies: {
+            heading: this.$i18n.t('ex-us'),
+            content: {
+              title: this.$i18n.t('ex-us-aalto'),
+              date: this.$i18n.t('ex-us-aalto-date'),
+              body: [
+                this.$i18n.t('ex-us-aalto-cs'),
+                this.$i18n.t('ex-us-aalto-dsd'),
+                this.$i18n.t('ex-us-aalto-qt'),
+              ],
+            },
+          },
+        },
+        {
+          relevantCourses: {
+            heading: this.$i18n.t('ex-rc'),
+            content: [
+              {
+                title: this.$i18n.t('ex-rc-cs'),
+                courses: [
+                  {
+                    name: this.$i18n.t('ex-rc-cs-dsa'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125590013-20210801/brochure',
+                  },
+                  {
+                    name: this.$i18n.t('ex-rc-cs-ppc'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125618448-20210801/brochure',
+                  },
+                  {
+                    name: this.$i18n.t('ex-rc-cs-cg'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125592183-20210801/brochure',
+                  },
+                  {
+                    name: this.$i18n.t('ex-rc-cs-swp'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125591890-20210801/brochure',
+                  },
+                  {
+                    name: this.$i18n.t('ex-rc-cs-ps'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1142318301-20210801/brochure',
+                  },
+                  {
+                    name: this.$i18n.t('ex-rc-cs-db'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125590913-20210801/brochure',
+                  },
+                ],
+              },
+              {
+                title: this.$i18n.t('ex-rc-dsd'),
+                courses: [
+                  {
+                    name: this.$i18n.t('ex-rc-dsd-sns'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1113161434-20210801/brochure',
+                  },
+                  {
+                    name: this.$i18n.t('ex-rc-dsd-erts'),
+                    link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1121459492-20210801/brochure',
+                  },
+                ],
+              },
             ],
           },
         },
-      },
-      {
-        relevantCourses: {
-          heading: 'Relevant Courses',
-          content: [
-            {
-              title: 'Computer Science',
-              courses: [
-                {
-                  name: 'Data Structures and Algorithms',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125590013-20210801/brochure',
-                },
-                {
-                  name: 'Programming Parallel Computers',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125618448-20210801/brochure',
-                },
-                {
-                  name: 'Computer Graphics',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125592183-20210801/brochure',
-                },
-                {
-                  name: 'Software Project',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125591890-20210801/brochure',
-                },
-                {
-                  name: 'Programming Studio 1+2',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1142318301-20210801/brochure',
-                },
-                {
-                  name: 'Databases',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1125590913-20210801/brochure',
-                },
-              ],
-            },
-            {
-              title: 'Digital Systems and Design',
-              courses: [
-                {
-                  name: 'Signals and Systems',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1113161434-20210801/brochure',
-                },
-                {
-                  name: 'Embedded Real-Time Systems',
-                  link: 'https://sisu.aalto.fi/student/courseunit/aalto-OPINKOHD-1121459492-20210801/brochure',
-                },
-              ],
-            },
-          ],
+        {
+          pastEmployment: {
+            heading: this.$i18n.t('ex-pe'),
+            content: [
+              {
+                title: this.$i18n.t('ex-pe-efi'),
+                date: this.$i18n.t('ex-pe-efi-date'),
+                description: this.$i18n.t('ex-pe-efi-desc'),
+              },
+            ],
+          },
         },
-      },
-      {
-        pastEmployment: {
-          heading: 'Past Employment',
-          content: [
-            {
-              title: 'Eficode',
-              date: 'August 10, 2020 – August 21, 2021',
-              description: 'UX-designer summer trainee',
-            },
-          ],
-        },
-      },
-    ],
-  }),
+      ],
+    };
+  },
 });
 </script>

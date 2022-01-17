@@ -1,38 +1,38 @@
 <template>
   <v-app>
     <v-app-bar
-        app
-        color="primary"
-        dark
+      app
+      color="primary"
+      dark
     >
       <v-spacer/>
       <v-btn @click="$vuetify.goTo(0)" text>
-        Lorem
+        {{ $t("firstName") }}
       </v-btn>
 
       <v-spacer/>
 
       <v-btn @click="$vuetify.goTo('#aboutMe')" text>
-        About Me
+        {{ $t("aboutMe") }}
       </v-btn>
 
       <v-btn @click="$vuetify.goTo('#experience')" text>
-        Experience
+        {{ $t("experience") }}
       </v-btn>
 
       <v-btn @click="$vuetify.goTo('#projects')" text>
-        Projects
+        {{ $t("projects") }}
       </v-btn>
 
       <v-spacer/>
 
       <v-btn
-          class="ma-2"
-          fab
-          small
-          depressed
-          color="transparent"
-          v-on:click="switchTheme"
+        class="ma-2"
+        fab
+        small
+        depressed
+        color="transparent"
+        v-on:click="switchTheme"
       >
         <v-icon>
           mdi-theme-light-dark
@@ -46,26 +46,26 @@
 
     <v-footer color="black" padless class="ma-0">
       <v-container
-          class="transparent white--text text-center align-center"
+        class="transparent white--text text-center align-center"
       >
         <v-row>
           <v-col>
             <v-card-text class="pb-1">
-              Contact me via e-mail
+              {{ $t("contactMe") }}
             </v-card-text>
             <v-card-text class="pt-1">
-              firstname dot lastname at outlook dot com
+              {{ $t("email") }}
             </v-card-text>
           </v-col>
           <v-col>
             <v-card-text>
               <v-btn
-                  v-for="icon in icons"
-                  :key="icon"
-                  class="mx-4 white--text"
-                  :href="icon.href"
-                  target="_blank"
-                  icon
+                v-for="icon in icons"
+                :key="icon"
+                class="mx-4 white--text"
+                :href="icon.href"
+                target="_blank"
+                icon
               >
                 <v-icon size="24px">
                   {{ icon.pic }}
@@ -78,7 +78,8 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          ©{{ new Date().getFullYear() }} — <strong>Erika Marttinen</strong>
+          © {{ new Date().getFullYear() }} — <strong>
+          {{ $t("firstName") }} {{ $t("lastName") }}</strong>
         </v-card-text>
       </v-container>
     </v-footer>

@@ -1,7 +1,7 @@
 <template>
   <v-container class="v-container-custom">
     <v-col>
-      <v-col class="text-h4"> Projects</v-col>
+      <v-col class="text-h4"> {{ $t('projects') }} </v-col>
       <template v-for="item in items">
         <v-divider :key="item"/>
 
@@ -12,7 +12,7 @@
             <v-expansion-panels class="pt-3">
               <v-expansion-panel>
                 <v-expansion-panel-header class="text-body-1">
-                  View detailed description
+                  {{ $t('pr-viewDesc') }}
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
                   <v-col class="text-body-2" v-text="item.description"/>
@@ -25,7 +25,7 @@
                   target="_blank"
                   color="primary"
               >
-                View on GitHub
+                {{ $t('pr-viewGH') }}
               </v-btn>
             </v-col>
           </v-col>
@@ -55,28 +55,30 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  data: () => ({
-    items: [
-      {
-        title: '3D viewer',
-        summary: 'A Wavefront OBJ file viewer written in Scala',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link: 'https://github.com/purkka/3D-Viewer',
-        images: [
-          '3D_opening.png',
-        ],
-      },
-      {
-        title: 'DSO display app',
-        summary: 'A virtual display application for the Voltcraft DSO 4022 oscilloscope written in Rust',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link: 'https://github.com/purkka/dso-display',
-        images: [
-          'logo.svg',
-          'logo.svg',
-        ],
-      },
-    ],
-  }),
+  data() {
+    return {
+      items: [
+        {
+          title: this.$i18n.t('pr-3d'),
+          summary: this.$i18n.t('pr-3d-summary'),
+          description: this.$i18n.t('pr-3d-desc'),
+          link: 'https://github.com/purkka/3D-Viewer',
+          images: [
+            '3D_opening.png',
+          ],
+        },
+        {
+          title: this.$i18n.t('pr-dso'),
+          summary: this.$i18n.t('pr-dso-summary'),
+          description: this.$i18n.t('pr-dso-desc'),
+          link: 'https://github.com/purkka/dso-display',
+          images: [
+            'logo.svg',
+            'logo.svg',
+          ],
+        },
+      ],
+    };
+  },
 });
 </script>
