@@ -4,6 +4,7 @@
   "aboutMe": "About Me",
   "experience": "Experience",
   "projects": "Projects",
+  "programming": "Programming",
   "contactMe": "Contact me via e-mail",
   "email": "erika dot marttinen at outlook dot com",
   "in-hi": "Hi, I'm",
@@ -37,5 +38,10 @@
   "pr-3d-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "pr-dso": "DSO display app",
   "pr-dso-summary": "A Wavefront OBJ file viewer written in Scala",
-  "pr-dso-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  "pr-dso-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "pg-scala": "Scala",
+  "pg-rust": "Rust",
+  "pg-c": "C/C++",
+  "pg-vue": "Vue/Vuetify",
+  "pg-script": "TypeScript"
 }

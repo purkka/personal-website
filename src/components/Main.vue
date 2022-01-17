@@ -17,6 +17,10 @@
         <v-sheet class="v-sheet-custom" color="background">
           <Projects id="projects"/>
         </v-sheet>
+
+        <v-sheet class="v-sheet-custom">
+          <Programming id="programming"/>
+        </v-sheet>
       </v-col>
     </v-row>
   </v-container>
@@ -24,6 +28,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import Programming from '@/components/Programming.vue';
 import AboutMe from './AboutMe.vue';
 import Intro from './Intro.vue';
 import Experience from './Experience.vue';
@@ -32,7 +37,11 @@ import Projects from './Projects.vue';
 export default Vue.extend({
   name: 'Main',
   components: {
-    Projects, Experience, Intro, AboutMe,
+    Programming,
+    Projects,
+    Experience,
+    Intro,
+    AboutMe,
   },
 });
 </script>

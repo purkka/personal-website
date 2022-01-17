@@ -5,7 +5,6 @@
       color="primary"
       dark
     >
-      <v-spacer/>
       <v-btn @click="$vuetify.goTo(0)" text>
         {{ $t("firstName") }}
       </v-btn>
@@ -22,6 +21,10 @@
 
       <v-btn @click="$vuetify.goTo('#projects')" text>
         {{ $t("projects") }}
+      </v-btn>
+
+      <v-btn @click="$vuetify.goTo('#programming')" text>
+        {{ $t("programming") }}
       </v-btn>
 
       <v-spacer/>

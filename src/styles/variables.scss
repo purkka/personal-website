@@ -14,6 +14,11 @@
   max-width: 1450px;
 }
 
+.v-col-table {
+  max-width: 600px;
+  min-width: 100%;
+}
+
 // Custom scrollbar
 ::-webkit-scrollbar {
   width: 10px;
