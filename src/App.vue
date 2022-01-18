@@ -11,36 +11,81 @@
 
       <v-spacer/>
 
-      <v-btn @click="$vuetify.goTo('#aboutMe')" text>
-        {{ $t("aboutMe") }}
-      </v-btn>
+      <div class="hidden-sm-and-down align-center">
+        <v-btn @click="$vuetify.goTo('#aboutMe')" text>
+          {{ $t("aboutMe") }}
+        </v-btn>
 
-      <v-btn @click="$vuetify.goTo('#experience')" text>
-        {{ $t("experience") }}
-      </v-btn>
+        <v-btn @click="$vuetify.goTo('#experience')" text>
+          {{ $t("experience") }}
+        </v-btn>
 
-      <v-btn @click="$vuetify.goTo('#projects')" text>
-        {{ $t("projects") }}
-      </v-btn>
+        <v-btn @click="$vuetify.goTo('#projects')" text>
+          {{ $t("projects") }}
+        </v-btn>
 
-      <v-btn @click="$vuetify.goTo('#programming')" text>
-        {{ $t("programming") }}
-      </v-btn>
+        <v-btn @click="$vuetify.goTo('#programming')" text>
+          {{ $t("programming") }}
+        </v-btn>
 
-      <v-spacer/>
+        <v-btn
+          class="ma-2"
+          fab
+          small
+          depressed
+          color="transparent"
+          v-on:click="switchTheme"
+        >
+          <v-icon> mdi-theme-light-dark </v-icon>
+        </v-btn>
+      </div>
 
-      <v-btn
-        class="ma-2"
-        fab
-        small
-        depressed
-        color="transparent"
-        v-on:click="switchTheme"
-      >
-        <v-icon>
-          mdi-theme-light-dark
-        </v-icon>
-      </v-btn>
+      <div class="hidden-md-and-up align-center">
+        <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon> mdi-menu </v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item @click="$vuetify.goTo('#aboutMe')">
+            <v-list-item-title>
+              {{ $t("aboutMe") }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="$vuetify.goTo('#experience')">
+            <v-list-item-title>
+              {{ $t("experience") }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="$vuetify.goTo('#projects')">
+            <v-list-item-title>
+              {{ $t("projects") }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="$vuetify.goTo('#programming')">
+            <v-list-item-title>
+              {{ $t("programming") }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item v-on:click="switchTheme">
+            <v-list-item-title class="text-center">
+              <v-icon> mdi-theme-light-dark </v-icon>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      </div>
+
     </v-app-bar>
 
     <v-main class="background">
