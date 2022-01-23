@@ -36,8 +36,8 @@ export default {
         { name: this.$i18n.t('pg-scala'), value: 85 },
         { name: this.$i18n.t('pg-c'), value: 75 },
         { name: this.$i18n.t('pg-rust'), value: 55 },
-        { name: this.$i18n.t('pg-vue'), value: 45 },
-        { name: this.$i18n.t('pg-script'), value: 30 },
+        { name: this.$i18n.t('pg-vue'), value: 55 },
+        { name: this.$i18n.t('pg-script'), value: 40 },
       ],
     };
   },

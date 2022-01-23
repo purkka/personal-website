@@ -85,24 +85,24 @@
                 v-text="item.pastEmployment.heading"
             />
           </v-col>
+
           <v-col>
             <template v-for="content in item.pastEmployment.content">
-
               <v-col :key="content">
                 <v-row>
-                  <div>
                     <v-col
                         class="text-h6"
                         v-text="content.title"
                     />
-                    <v-col
-                        v-text="content.description"/>
-                  </div>
                   <v-spacer/>
                   <v-col
                       class="text-overline grey--text"
                       v-text="content.date"
                   />
+                </v-row>
+                <v-row>
+                  <v-col
+                    v-text="content.description"/>
                 </v-row>
               </v-col>
             </template>
