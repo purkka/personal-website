@@ -15,7 +15,9 @@
                   {{ $t('pr-viewDesc') }}
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <v-col class="text-body-2" v-text="item.description"/>
+                  <template v-for="paragraph in item.description">
+                    <v-col :key="paragraph" class="text-body-1" v-text="paragraph"/>
+                  </template>
                 </v-expansion-panel-content>
               </v-expansion-panel>
             </v-expansion-panels>
@@ -32,7 +34,7 @@
           <v-col cols="5">
             <v-col>
               <v-carousel
-                  height="300"
+                  height="400"
                   hide-delimiter-background
                   hide-delimiters
               >
@@ -61,20 +63,31 @@ export default Vue.extend({
         {
           title: this.$i18n.t('pr-3d'),
           summary: this.$i18n.t('pr-3d-summary'),
-          description: this.$i18n.t('pr-3d-desc'),
+          description: [
+            this.$i18n.t('pr-3d-desc-0'),
+            this.$i18n.t('pr-3d-desc-1'),
+            this.$i18n.t('pr-3d-desc-2'),
+          ],
           link: 'https://github.com/purkka/3D-Viewer',
           images: [
-            '3D_opening.png',
+            '3D-0.png',
+            '3D-1.png',
+            '3D-2.png',
+            '3D-3.png',
           ],
         },
         {
           title: this.$i18n.t('pr-dso'),
           summary: this.$i18n.t('pr-dso-summary'),
-          description: this.$i18n.t('pr-dso-desc'),
+          description: [
+            this.$i18n.t('pr-dso-desc-0'),
+            this.$i18n.t('pr-dso-desc-1'),
+            this.$i18n.t('pr-dso-desc-2'),
+          ],
           link: 'https://github.com/purkka/dso-display',
           images: [
-            'logo.svg',
-            'logo.svg',
+            'DSO-0.jpg',
+            'DSO-1.jpg',
           ],
         },
       ],

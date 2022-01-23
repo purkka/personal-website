@@ -37,8 +37,8 @@ export default Vue.extend({
         { name: this.$i18n.t('pg-scala'), value: 85 },
         { name: this.$i18n.t('pg-c'), value: 75 },
         { name: this.$i18n.t('pg-rust'), value: 55 },
-        { name: this.$i18n.t('pg-vue'), value: 55 },
-        { name: this.$i18n.t('pg-script'), value: 40 },
+        { name: this.$i18n.t('pg-script'), value: 55 },
+        { name: this.$i18n.t('pg-vue'), value: 40 },
       ],
     };
   },
