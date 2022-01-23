@@ -27,9 +27,10 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   data() {
     return {
       items: [
@@ -41,7 +42,7 @@ export default {
       ],
     };
   },
-};
+});
 </script>
 
 <style>

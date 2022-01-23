@@ -10,19 +10,20 @@
         </v-col>
       </v-col>
       <v-col class="pa-0 ma-0">
-        <!-- The Vuetify logo is used as a placeholder image -->
         <v-img
-            :src="require('../assets/logo.svg')"
+            :src="require('../assets/profile.png')"
             contain
-            height="400"
+            height="500"
         />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   data() {
     return {
       items: [
@@ -31,5 +32,5 @@ export default {
       ],
     };
   },
-};
+});
 </script>
