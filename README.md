@@ -1,4 +1,7 @@
-# test-ts
+# Personal website of Erika Marttinen
+
+This repo contains the Vue/Vuetify sources for the website.
+Live version available at [purkka.github.io](https://purkka.github.io).
 
 ## Project setup
 ```
